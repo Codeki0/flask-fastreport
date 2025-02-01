@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Optimized Web Report</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="left-buttons">
+            <a href="https://www.example1.com" target="_blank" class="btn hyperlink">Example 1</a>
+            <a href="https://www.example2.com" target="_blank" class="btn hyperlink">Example 2</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="sections-container">
+            <section class="report-section" data-section="Zeroth">
+                <div class="section-header">
+                    <h2>Zeroth</h2>
+                    <div class="button-group">
+                        <button class="btn clear-btn" onclick="clearSection('Zeroth')">All Clear</button>
+                        <button class="btn time-btn" onclick="insertCurrentTime('Zeroth')">현재시간</button>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <div class="input-row">
+                        <label>항목 1:</label>
+                        <textarea class="input-field"></textarea>
+                    </div>
+                    <div class="input-row">
+                        <label>항목 2:</label>
+                        <textarea class="input-field"></textarea>
+                    </div>
+                    <div class="input-row">
+                        <label>항목 3:</label>
+                        <textarea class="input-field"></textarea>
+                    </div>
+                    <div class="input-row">
+                        <label>항목 4:</label>
+                        <textarea class="input-field"></textarea>
+                    </div>
+                </div>
+
+                <textarea class="output-field" spellcheck="false"></textarea>
+                
+                <div class="button-container">
+                    <button class="btn generate-btn" onclick="generateAndCopy('Zeroth')">Generate & Copy</button>
+                    <div class="status-label"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <script src="static/main.js"></script>
+</body>
+</html>
