@@ -1,0 +1,190 @@
+:root {
+    --bg-color: #f5f7fa;
+    --button-color: #e2e8f0;
+    --text-field-bg: #ffffff;
+    --text-field-highlight: #e2e8f0;
+    --generate-btn-color: #4299e1;
+    --hyperlink-color: #63b3ed;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+}
+
+body {
+    margin: 0;
+    padding: 15px;
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text-primary);
+    font-size: 14px;  /* 기본 폰트 크기 설정 */
+}
+
+.sections-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;  /* 화면이 좁을 때 자동으로 줄바꿈 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.report-section {
+    background: var(--text-field-bg);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    width: 330px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 89.5vh;
+}
+
+.report-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px var(--shadow-color);
+}
+
+.input-container {
+    flex: 1;
+    overflow-y: auto;  /* 스크롤 복구 */
+    padding-right: 10px;
+    margin-right: -10px;
+    min-height: 0;  /* 추가: 스크롤이 작동하도록 함 */
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;  /* 15px에서 12px로 줄임 */
+    padding-bottom: 8px;  /* 10px에서 8px로 줄임 */
+    border-bottom: 2px solid var(--text-field-highlight);
+}
+
+.section-header h2 {
+    font-size: 1.3rem;  /* 1.5rem에서 축소 */
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 8px;
+}
+
+.input-row {
+    margin: 8px 0;  /* 10px에서 8px로 줄임 */
+}
+
+.input-row label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;  /* 0.9rem에서 축소 */
+}
+
+.input-field, .output-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--text-field-highlight);
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 0.8rem;  /* 0.95rem에서 축소 */
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.input-field:focus, .output-field:focus {
+    outline: none;
+    border-color: var(--generate-btn-color);
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+.output-field {
+    height: 145px;  /* 130px에서 120px로 줄임 */
+    margin: 8px 0;  /* 10px에서 8px로 줄임 */
+    background-color: #f8fafc;
+    margin-top: auto;
+}
+
+.btn {
+    padding: 6px 14px;  /* 8px 16px에서 축소 */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.8rem;  /* 0.9rem에서 축소 */
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.generate-btn {
+    background-color: var(--generate-btn-color);
+    color: white;
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;  /* 1rem에서 축소 */
+}
+
+.generate-btn:hover {
+    background-color: #3182ce;
+}
+
+.hyperlink {
+    background-color: var(--hyperlink-color);
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 8px 16px;
+}
+
+.hyperlink:hover {
+    background-color: #4299e1;
+}
+
+.status-label {
+    text-align: center;
+    color: #48bb78;
+    margin-top: 12px;
+    font-size: 0.8rem;  /* 0.9rem에서 축소 */
+    font-weight: 500;
+    opacity: 0.9;
+    height: 20px;  /* 추가: 상태 메시지 영역 높이 고정 */
+    line-height: 20px;  /* 추가: 텍스트 수직 정렬 */
+}
+
+.clear-btn, .time-btn {
+    background-color: var(--button-color);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    padding: 6px 12px;
+}
+
+.clear-btn:hover, .time-btn:hover {
+    background-color: #cbd5e0;
+    color: var(--text-primary);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .sections-container {
+        gap: 15px;
+    }
+    
+    .report-section {
+        width: 100%;
+        max-width: 500px;
+    }
+} 
