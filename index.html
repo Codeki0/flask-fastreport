@@ -15,6 +15,7 @@
 
     <main>
         <div class="sections-container">
+            <!-- Zeroth Section -->
             <section class="report-section" data-section="Zeroth">
                 <div class="section-header">
                     <h2>Zeroth</h2>
@@ -23,36 +24,65 @@
                         <button class="btn time-btn" onclick="insertCurrentTime('Zeroth')">현재시간</button>
                     </div>
                 </div>
-                
                 <div class="input-container">
-                    <div class="input-row">
-                        <label>항목 1:</label>
-                        <textarea class="input-field"></textarea>
-                    </div>
-                    <div class="input-row">
-                        <label>항목 2:</label>
-                        <textarea class="input-field"></textarea>
-                    </div>
-                    <div class="input-row">
-                        <label>항목 3:</label>
-                        <textarea class="input-field"></textarea>
-                    </div>
-                    <div class="input-row">
-                        <label>항목 4:</label>
-                        <textarea class="input-field"></textarea>
-                    </div>
+                    <div class="input-row"><label>항목 1:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 2:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 3:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 4:</label><textarea class="input-field"></textarea></div>
                 </div>
-
                 <textarea class="output-field" spellcheck="false"></textarea>
-                
-                <div class="button-container">
-                    <button class="btn generate-btn" onclick="generateAndCopy('Zeroth')">Generate & Copy</button>
-                    <div class="status-label"></div>
+                <button class="btn generate-btn" onclick="generateAndCopy('Zeroth')">Generate & Copy</button>
+                <div class="status-label"></div> <!-- 클립보드 복사 메시지 표시 -->
+            </section>
+
+            <!-- 1st Section -->
+            <section class="report-section" data-section="1st">
+                <div class="section-header">
+                    <h2>1st</h2>
+                    <div class="button-group">
+                        <button class="btn clear-btn" onclick="clearSection('1st')">All Clear</button>
+                        <button class="btn time-btn" onclick="insertCurrentTime('1st')">현재시간</button>
+                    </div>
                 </div>
+                <div class="input-container">
+                    <div class="input-row"><label>항목 1:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 2:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 3:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 4:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 5:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 6:</label><textarea class="input-field"></textarea></div>
+                </div>
+                <textarea class="output-field" spellcheck="false"></textarea>
+                <button class="btn generate-btn" onclick="generateAndCopy('1st')">Generate & Copy</button>
+                <div class="status-label"></div>
+            </section>
+
+            <!-- 2nd Section -->
+            <section class="report-section" data-section="2nd">
+                <div class="section-header">
+                    <h2>2nd</h2>
+                    <div class="button-group">
+                        <button class="btn clear-btn" onclick="clearSection('2nd')">All Clear</button>
+                        <button class="btn time-btn" onclick="insertCurrentTime('2nd')">현재시간</button>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input-row"><label>항목 1:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 2:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 3:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 4:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 5:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 6:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 7:</label><textarea class="input-field"></textarea></div>
+                    <div class="input-row"><label>항목 8:</label><textarea class="input-field"></textarea></div>
+                </div>
+                <textarea class="output-field" spellcheck="false"></textarea>
+                <button class="btn generate-btn" onclick="generateAndCopy('2nd')">Generate & Copy</button>
+                <div class="status-label"></div>
             </section>
         </div>
     </main>
-    
+
     <script src="static/main.js"></script>
 </body>
 </html>
